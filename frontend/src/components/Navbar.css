@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.navbar{   
+    margin-top: 38px;
+    margin-bottom: 80px;
+}
+
+.navbar-container {
+    width: 100%;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0rem;
+    padding: 0 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar ul{
+    padding: 20px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    font-size: 1.4rem;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar a:hover{
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+    color: rgb(98, 98, 98);
+}
+
+.HomeTitle {
+    font-size: 2.1rem;
+    background-image: linear-gradient(60deg, rgb(127, 45, 45), black);
+    background-clip: text;
+    color: transparent;
+}

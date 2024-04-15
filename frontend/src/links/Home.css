@@ -1,0 +1,71 @@
+.Main {
+    transform: translateX(-20);
+    flex-wrap: wrap;
+    width: 100%;
+    height: 57vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(heartrate.jpg);
+    background-size: cover;
+    background-position: cover;
+}
+
+.HTitle {
+    padding-top: 100px;
+    background-image: linear-gradient(60deg, rgb(233, 231, 231), rgb(128, 127, 127));
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+}
+
+.HBody {
+    color: white;
+    font-size: 1.2rem;
+}
+
+button {
+    margin-top: 30px;
+    border-style: none;
+    border-radius: 10px;
+    background-color: rgb(208, 203, 203);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+button:hover {
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+    justify-content: center;
+    background-color: rgb(102, 102, 102);
+    font-size: 1.1rem;
+}
+
+.MLContainer {
+    padding-top: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.graph {
+    float: right;
+    width: 350px;
+}
+
+.Text {
+    text-align: left;
+    font-size: 1.35rem;
+}
+
+.Additional {
+    font-size: larger;
+    padding: 80px;
+}
+
+li{
+    text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
