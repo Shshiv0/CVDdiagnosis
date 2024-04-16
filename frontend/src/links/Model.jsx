@@ -9,6 +9,8 @@ function Model() {
 
 export default Model
 
+
+// Create Form that sends data in JSON format to backend
 class JsonForm extends Component{
     constructor(props){
         super(props);
@@ -19,10 +21,12 @@ class JsonForm extends Component{
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    // Set state to the target value
     handleChange(event){
         this.setState({[event.target.name]:event.target.value});
     }
 
+    // Send data to backend
     handleSubmit(event){
         event.preventDefault();
 
@@ -41,6 +45,7 @@ class JsonForm extends Component{
         .then((respJ) => this.setState({result:respJ.result}))
     }
 
+    // Render a form
     render(){
         return <div>
         <form onSubmit={this.handleSubmit}>

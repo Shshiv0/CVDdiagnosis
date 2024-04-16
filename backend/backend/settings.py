@@ -92,13 +92,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+# Clever Cloud Database
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'bxcnsh7qnbg0n304syy0',
+        'USER': 'uxtyumbysoquwiuok6x1',
+        'PASSWORD': 'v6lI22AB3bqQd3qOjdviwD0AfQtRnN',
+        'HOST': 'bxcnsh7qnbg0n304syy0-postgresql.services.clever-cloud.com',
+        'PORT': '50013',
     }
 }
 
