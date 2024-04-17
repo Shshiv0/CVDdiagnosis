@@ -1,10 +1,6 @@
 import "./Generic.css"
-import { PDFViewer } from "@react-pdf/renderer"
 
 function About() {
-   let reader = new FileReader()
-   reader.readAsDataURL(['ML_Model/pdf'])
-
     return <div className='container'>
         <h1 className='title'>About CVD Diagnosis</h1>
         <div className = 'content'>
