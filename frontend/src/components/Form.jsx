@@ -3,6 +3,7 @@ import api from "../api";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import "./Form.css"
+import Loading from "./Loading";
 
 function Form({route, method}) {
     // Initialize variables used for logging in/registering
@@ -49,7 +50,7 @@ function Form({route, method}) {
         <h1>{type}</h1>
         <input className="general-form-input" type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="username"/>
         <input className="general-form-input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="password"/>
-        
+        {loading && <Loading />}
         <p>{disclaimer}</p>
         
         <button className="general-form-button" type="submit">{type}</button>
