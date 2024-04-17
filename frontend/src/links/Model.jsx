@@ -30,7 +30,7 @@ class JsonForm extends Component{
     handleSubmit(event){
         event.preventDefault();
 
-        const url="http://localhost:8000/resultJson";
+        const url="https://f4620081-a8e3-4fa9-9ff1-8c5ddaea8087-dev.e1-us-cdp-2.choreoapis.dev/cvd-diagnosis/backend/rest-api-be2/v1.0/resultJson";
         const bodyData=JSON.stringify( {"age":this.state.age,"gender":this.state.gender, "cpt":this.state.cpt,
                                         "trestbps":this.state.trestbps, "chol":this.state.chol,
                                         "fbs":this.state.fbs, "restecg":this.state.restecg,
