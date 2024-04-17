@@ -20,10 +20,6 @@ function About() {
              made by the model by comparing it with previous data. If you have any medical concerns please consult with a medical
              professional near you. </p>
         </div>
-        <div>
-         <h1>The Code Behind the Magic</h1>
-          <iframe src="ML_Model.pdf" frameBorder="0"></iframe>
-        </div>
       </div>
 }
 
