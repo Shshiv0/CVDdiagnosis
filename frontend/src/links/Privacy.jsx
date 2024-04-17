@@ -8,7 +8,7 @@ function Privacy(){
                 stored, the only data stored is your username and password for registration purposes.
             </p>
             <p>No information information is tied to your personal information, it is your responsibility to avoid using personal information when registering for an account.
-            It is your responsibility to ensure all registration data is not personal information
+            Ensure all registration data is not your personal information
             </p>
         </div>
     </div>
