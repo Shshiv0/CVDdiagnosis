@@ -23,6 +23,7 @@ def resultJson(request):
     if prediction[0]:
         return JsonResponse({'result': 'The machine learing model has predicted that you are less likely to have cardiovascular disease.'})
     return JsonResponse({'result': 'The machine learing model has predicted that you are more likely to have cardiovascular disease. Please consider seeking further examination by a medical professional.'})
+    
 
 # View for creating a new user
 class CreateUserView(generics.CreateAPIView):

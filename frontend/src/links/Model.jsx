@@ -16,7 +16,8 @@ class JsonForm extends Component{
         super(props);
         this.state = {age:"", gender:"", cpt:"", trestbps:"", chol:"",
                       fbs:"", restecg:"", thalach:"", exang:"", oldpeak:"",
-                      slope:"", ca:"", thal:"", result:""}
+                      slope:"", ca:"", thal:"", result:"Please fill out the screening questions for a result!"}
+                      
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -29,7 +30,7 @@ class JsonForm extends Component{
     // Send data to backend
     handleSubmit(event){
         event.preventDefault();
-
+    
         const url="https://f4620081-a8e3-4fa9-9ff1-8c5ddaea8087-dev.e1-us-cdp-2.choreoapis.dev/cvd-diagnosis/backend/rest-api-be2/v1.0/resultJson";
         const bodyData=JSON.stringify( {"age":this.state.age,"gender":this.state.gender, "cpt":this.state.cpt,
                                         "trestbps":this.state.trestbps, "chol":this.state.chol,
@@ -43,6 +44,7 @@ class JsonForm extends Component{
         fetch(url,reqOpt)
         .then((resp) => resp.json())
         .then((respJ) => this.setState({result:respJ.result}))
+        .catch((error) => alert("Error: All data must be filled and must be integers"))
     }
 
     // Render a form
@@ -52,7 +54,7 @@ class JsonForm extends Component{
             <h1 className='ModelTitle'>Screening</h1>
                     <div className="query">
                         <h4>Age: </h4>
-                        <input type='text' name="age" placeholder='age' value={this.state.age} onChange={this.handleChange} required className="textInput"></input>
+                        <input type='text' name="age" placeholder='Age' value={this.state.age} onChange={this.handleChange} required className="textInput"></input>
                     </div>
                     <div className="query">
                         <h4>Gender</h4>
@@ -88,12 +90,12 @@ class JsonForm extends Component{
 
                     <div className="query">
                         <h4>Resting Blood Pressure: </h4>
-                        <input type='text' name="trestbps" placeholder='trestbps' value={this.state.trestbps} required onChange={this.handleChange} className="textInput"></input>
+                        <input type='text' name="trestbps" placeholder='Blood Pressure' value={this.state.trestbps} required onChange={this.handleChange} className="textInput"></input>
                     </div>
 
                     <div className="query">
                         <h4>Serum Cholesterol (mg/dl): </h4>
-                        <input type='text' name="chol" placeholder='chol' value={this.state.chol} required onChange={this.handleChange} className="textInput"></input>
+                        <input type='text' name="chol" placeholder='Cholestrol' value={this.state.chol} required onChange={this.handleChange} className="textInput"></input>
                     </div>
 
                     <div className="query">
@@ -126,7 +128,7 @@ class JsonForm extends Component{
 
                     <div className="query">
                         <h4>Maximum Heart Rate Achieved: </h4>
-                        <input type='text' name="thalach" placeholder='thalach' value={this.state.thalach} required onChange={this.handleChange} className="textInput"></input>
+                        <input type='text' name="thalach" placeholder='Heart Rate' value={this.state.thalach} required onChange={this.handleChange} className="textInput"></input>
                     </div>
                         
                     <div className="query">
@@ -143,7 +145,7 @@ class JsonForm extends Component{
 
                     <div className="query">
                         <h4>ST depression induced by exercise relative to rest: </h4>
-                        <input type='text' name="oldpeak" placeholder='oldpeak' value={this.state.oldpeak} required onChange={this.handleChange} className="textInput"></input>
+                        <input type='text' name="oldpeak" placeholder='Oldpeak' value={this.state.oldpeak} required onChange={this.handleChange} className="textInput"></input>
                     </div>
 
                     <div className="query">
@@ -202,6 +204,7 @@ class JsonForm extends Component{
 
             <div className="results">
                 <h1>Result:</h1>
+                
                 <p>{this.state.result}</p>
                 <p>Disclaimer: It is important to recognize that this prediction is not a conclusive diagnosis of your condition, but rather a comparison between your symptoms and other symptoms within a database. If you have any medical concerns seek help from a medical professional.</p>
             </div>

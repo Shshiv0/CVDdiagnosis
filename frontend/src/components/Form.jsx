@@ -38,7 +38,7 @@ function Form({route, method}) {
             }
         }
         catch (error) {
-            alert(error)
+            alert("Invalid Username or Password")
         }
         finally {
             setLoading(false)
