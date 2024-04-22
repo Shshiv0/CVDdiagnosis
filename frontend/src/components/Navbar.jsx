@@ -26,7 +26,7 @@ const Navbar = () => {
               <a href='/register'>Get Started</a>
             </li>
             <li key={4}>
-              <a href='/logout'>Logout</a>
+              <a href='/logout'>Login/Logout</a>
             </li>
           </ul>
         </div>
